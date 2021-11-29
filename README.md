@@ -69,20 +69,29 @@ Design a neural network model, taking into account any modifications that will o
 Save and export your results to an HDF5 file, and name it AlphabetSoupCharity_Optimization.h5.
 
 # Step 4: Write a Report on the Neural Network Model
-For this part of the Challenge, you’ll write a report on the performance of the deep learning model you created for AlphabetSoup.
 
-The report should contain the following:
+# Overview of the analysis: Explain the purpose of this analysis.
+This analysis is intended to provide the foundation with an algorithm to predict which applicants will be successful in the use of their potential grant funds. This will lead to a more effective use of funds, thereby providing better services in the community.
 
-Overview of the analysis: Explain the purpose of this analysis.
-
-Results: Using bulleted lists and images to support your answers, address the following questions.
-
-Data Preprocessing
+# Data Preprocessing
 What variable(s) are considered the target(s) for your model?
+  The "IS_SUCCESSFUL" column is the target.
+  
 What variable(s) are considered to be the features for your model?
+  The features are the rest of the columns that remain in the database following preprocessing.
+
 What variable(s) are neither targets nor features, and should be removed from the input data?
-Compiling, Training, and Evaluating the Model
+  I dropped the EIN and NAME columns.
+
+# Compiling, Training, and Evaluating the Model
 How many neurons, layers, and activation functions did you select for your neural network model, and why?
+  I included 2 hidden layers and used the 'relu' and 'sigmoid' activation functions. I included these layers in order to make sure that the outcome was at its     highest level of accuracy.
+
 Were you able to achieve the target model performance?
+  I'm not happy with the 72% accuracy, but was unable to increase the model performance.
+
 What steps did you take to try and increase model performance?
-Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+  See above.
+
+# Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+In my opinion, the model does not provide a high enough level of accuracy to add value to the grant decision process. I would suggest trying a supervised learning model to increase accuracy.
